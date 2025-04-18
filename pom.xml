@@ -26,6 +26,9 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>21</java.version>
+		<springframework.version>6.2.2</springframework.version>
+		<spring-boot.version>3.4.2</spring-boot.version>
+		<testcontainers.version>1.20.4</testcontainers.version>
 	</properties>
 
 	<distributionManagement>
@@ -43,6 +46,40 @@
 			<url>https://maven.pkg.github.com/jlmorab/ms.data</url>
 		</repository>
 	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+			<version>${testcontainers.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>${testcontainers.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>${testcontainers.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${springframework.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 
