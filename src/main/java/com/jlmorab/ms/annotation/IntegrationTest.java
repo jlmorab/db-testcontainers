@@ -1,4 +1,4 @@
-package com.jlmorab.data.annotation;
+package com.jlmorab.ms.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

@@ -1,4 +1,4 @@
-package com.jlmorab.data.config;
+package com.jlmorab.ms.config;
 
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;

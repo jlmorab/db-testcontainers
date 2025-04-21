@@ -5,15 +5,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.jlmorab.ms.data</groupId>
-		<artifactId>db-parent</artifactId>
-		<version>1.0.0</version>
+		<groupId>com.jlmorab.ms</groupId>
+		<artifactId>ms-parent</artifactId>
+		<version>0.2.1</version>
 	</parent>
 
-	<groupId>com.jlmorab.data</groupId>
-	<artifactId>db-testcontainers</artifactId>
+	<groupId>com.jlmorab.ms</groupId>
+	<artifactId>ms-testcontainers-tools</artifactId>
 	<version>0.1.0</version>
-	<name>db-testcontainers</name>
+	<name>ms-testcontainers-tools</name>
 	<description>Testcontainers common settings</description>
 
 	<developers>
@@ -26,16 +26,13 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>21</java.version>
-		<springframework.version>6.2.2</springframework.version>
-		<spring-boot.version>3.4.2</spring-boot.version>
-		<testcontainers.version>1.20.4</testcontainers.version>
 	</properties>
 
 	<distributionManagement>
 		<repository>
 			<id>github</id>
 			<name>GitHub jlmorab Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/jlmorab/ms.data</url>
+			<url>https://maven.pkg.github.com/jlmorab/ms</url>
 		</repository>
 	</distributionManagement>
 
@@ -43,7 +40,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub jlmorab - Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/jlmorab/ms.data</url>
+			<url>https://maven.pkg.github.com/jlmorab/ms</url>
 		</repository>
 	</repositories>
 
@@ -52,31 +49,27 @@
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>testcontainers</artifactId>
-			<version>${testcontainers.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>junit-jupiter</artifactId>
-			<version>${testcontainers.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.testcontainers</groupId>
 			<artifactId>postgresql</artifactId>
-			<version>${testcontainers.version}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>${springframework.version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>${spring-boot.version}</version>
+		</dependency>
 		</dependency>
 
 	</dependencies>
@@ -86,8 +79,11 @@
 		<plugins>
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 
 		</plugins>
