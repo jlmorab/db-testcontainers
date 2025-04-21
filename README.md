@@ -1,2 +1,2 @@
-# db-testcontainers
+# ms-testcontainers-tools
 Testcontainers common settings

@@ -5,15 +5,15 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>com.jlmorab.ms.data</groupId>
-		<artifactId>db-parent</artifactId>
-		<version>1.0.0</version>
+		<groupId>com.jlmorab.ms</groupId>
+		<artifactId>ms-parent</artifactId>
+		<version>0.2.1</version>
 	</parent>
 
-	<groupId>com.jlmorab.data</groupId>
-	<artifactId>db-testcontainers</artifactId>
-	<version>0.1.0-SNAPSHOT</version>
-	<name>db-testcontainers</name>
+	<groupId>com.jlmorab.ms</groupId>
+	<artifactId>ms-testcontainers-tools</artifactId>
+	<version>0.1.0</version>
+	<name>ms-testcontainers-tools</name>
 	<description>Testcontainers common settings</description>
 
 	<developers>
@@ -32,7 +32,7 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub jlmorab Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/jlmorab/ms.data</url>
+			<url>https://maven.pkg.github.com/jlmorab/ms</url>
 		</repository>
 	</distributionManagement>
 
@@ -40,17 +40,69 @@
 		<repository>
 			<id>github</id>
 			<name>GitHub jlmorab - Apache Maven Packages</name>
-			<url>https://maven.pkg.github.com/jlmorab/ms.data</url>
+			<url>https://maven.pkg.github.com/jlmorab/ms</url>
 		</repository>
 	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>testcontainers</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>junit-jupiter</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>postgresql</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+		</dependency>
+		
+		<!-- Test Dependencies -->
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-junit-jupiter</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 
 		<plugins>
 
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
 			</plugin>
 
 		</plugins>
