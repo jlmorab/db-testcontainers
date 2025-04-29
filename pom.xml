@@ -9,10 +9,9 @@
 		<artifactId>ms-parent</artifactId>
 		<version>0.2.1</version>
 	</parent>
-
-	<groupId>com.jlmorab.ms</groupId>
+	
 	<artifactId>ms-testcontainers-tools</artifactId>
-	<version>0.2.0</version>
+	<version>0.3.0</version>
 	<name>ms-testcontainers-tools</name>
 	<description>Testcontainers common settings</description>
 
@@ -26,6 +25,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>21</java.version>
+		<liquibase-hibernate.version>4.27.0</liquibase-hibernate.version>
 	</properties>
 
 	<distributionManagement>
@@ -71,23 +71,23 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		
 		<!-- Test Dependencies -->
-
+		
 		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-api</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter-engine</artifactId>
-			<scope>test</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-junit-jupiter</artifactId>
+			<groupId>com.jlmorab.ms</groupId>
+			<artifactId>ms-test-tools</artifactId>
+			<version>0.4.0</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -103,6 +103,18 @@
 				<configuration>
 					<skip>true</skip>
 				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.liquibase</groupId>
+				<artifactId>liquibase-maven-plugin</artifactId>
+				<dependencies>
+					<dependency>
+						<groupId>org.liquibase.ext</groupId>
+						<artifactId>liquibase-hibernate5</artifactId>
+						<version>${liquibase-hibernate.version}</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 
 		</plugins>
