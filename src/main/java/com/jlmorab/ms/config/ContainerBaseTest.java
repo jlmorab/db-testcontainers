@@ -38,6 +38,7 @@ public abstract class ContainerBaseTest {
         registry.add("spring.datasource.username", database::getUsername);
         registry.add("spring.datasource.password", database::getPassword);
         registry.add("spring.datasource.driver-class-name", database::getDriverClassName);
+        registry.add("spring.liquibase.enabled", () -> "false");
     }//end databaseProperties()
 	
 	/**
