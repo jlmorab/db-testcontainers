@@ -11,7 +11,7 @@
 	</parent>
 	
 	<artifactId>ms-testcontainers-tools</artifactId>
-	<version>0.4.0-SNAPSHOT</version>
+	<version>0.4.0</version>
 	<name>ms-testcontainers-tools</name>
 	<description>Testcontainers common settings</description>
 
