@@ -11,7 +11,7 @@
 	</parent>
 	
 	<artifactId>ms-testcontainers-tools</artifactId>
-	<version>0.3.0</version>
+	<version>0.4.0</version>
 	<name>ms-testcontainers-tools</name>
 	<description>Testcontainers common settings</description>
 
@@ -45,6 +45,16 @@
 	</repositories>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.testcontainers</groupId>
