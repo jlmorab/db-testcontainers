@@ -50,7 +50,7 @@ public class LiquibaseMigrationManager {
 		}//end if
 	}//end resetAndApplyMigration()
 	
-	private static void performRollback( LiquibaseMigration migration, DataSource dataSource ) throws Exception {
+	public static void performRollback( LiquibaseMigration migration, DataSource dataSource ) throws Exception {
 		try {
 			Connection connection = dataSource.getConnection();
 			Database database = DatabaseFactory.getInstance()
@@ -68,7 +68,7 @@ public class LiquibaseMigrationManager {
 		}//end try
 	}//end performRollback()
 	
-	private static void performUpdate( LiquibaseMigration migration, DataSource dataSource ) throws Exception {
+	public static void performUpdate( LiquibaseMigration migration, DataSource dataSource ) throws Exception {
 		try {
 			SpringLiquibase liquibase = new SpringLiquibase();
 			liquibase.setDataSource( dataSource );
